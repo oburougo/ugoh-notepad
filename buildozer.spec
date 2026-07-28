@@ -20,7 +20,7 @@ version = 1.0.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.3.1
+requirements = python3,kivy
 
 # (str) Icon of the application
 #icon.filename = %(source.dir)s/assets/icons/icon.png
