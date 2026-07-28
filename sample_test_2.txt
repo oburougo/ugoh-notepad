@@ -1,0 +1,4 @@
+Ugoh Notepad
+============
+A cross-platform notepad written in Python and Kivy.
+Test line for word count, find and replace, and autosave.

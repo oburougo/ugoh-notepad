@@ -1,0 +1,28 @@
+# Ugoh Notepad - Python dependencies
+#
+# kivy
+#   The cross-platform GUI framework. It is the ONLY framework that lets
+#   the exact same Python code produce both a Windows desktop app and an
+#   Android APK, which is why the whole project is built on it.
+kivy==2.3.1
+
+# --- Windows-only extras (Kivy's OpenGL backend on Windows needs these) ---
+# These provide the SDL2 windowing/input libraries and GLEW OpenGL
+# bindings that Kivy needs on Windows. They are skipped automatically
+# on Linux/macOS/Android because of the environment marker below.
+kivy_deps.sdl2==0.7.0 ; sys_platform == "win32"
+kivy_deps.glew==0.3.1 ; sys_platform == "win32"
+kivy_deps.angle==0.4.0 ; sys_platform == "win32"
+
+# pyinstaller
+#   Packages the Python app + Kivy runtime into a single ugoh_notepad.exe
+#   for Windows, so end users don't need Python installed. See the
+#   "Packaging for Windows" section of README.md.
+pyinstaller==6.10.0
+
+# buildozer
+#   Builds the Android .apk from this same codebase. Only needed on
+#   Linux (Buildozer's Android build tooling does not support Windows
+#   directly - see the APK Build Guide in README.md for the recommended
+#   WSL2 workflow if you are on Windows).
+buildozer==1.5.0 ; sys_platform == "linux"
